@@ -28,4 +28,4 @@ echo "Commit files..."
 git add "${target}"
 git commit -m "Update ${target}"
 
-echo "Done\! Please check files and you can push now..."
+echo "Done! Please check files and you can push now..."
