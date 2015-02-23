@@ -78,11 +78,9 @@
         padding-left: 32px;
         opacity: 0.8;
       }
-      .blockContent {
-        position: relative;
+      .block {
         overflow: hidden;
-        height:auto;
-        padding: 18px 10px 48px 10px;
+        padding: 18px 15px;
       }
       .textContent {
         position: relative;
@@ -95,7 +93,7 @@
         padding-top: 0px;
 
       }
-      .sponsorblockContent {
+      .sponsor-block {
         position: relative;
         overflow: hidden;
         height:auto;
@@ -104,7 +102,7 @@
         padding-bottom: 32px;
         padding-top: 18px;
       }
-      .blockTitle {
+      .section-title {
         height: 60px;
         text-align: center;
         line-height: 60px;
@@ -148,14 +146,14 @@
   <body>
     <div id="wrapper">
 
-      <div id="bannerLogo">
+      <div class="block" id="bannerLogo">
         <img src="http://sitcon.org/2015/images/logo.png" alt="SITCON 學生計算機年會">
       </div>
-      <div class="bannerBlock">
+      <div class="block bannerBlock">
         <img src="title.jpg" alt="綠指針快報">
       </div>
 
-      <div class="blockTitle">
+      <div class="block section-title">
         <h1 class="slashTitle">
           <div class="slashBlock"></div>
           主題介紹
@@ -194,7 +192,7 @@
         </table>
       </div>
 
-      <div class="blockTitle">
+      <div class="block section-title">
         <h1 class="slashTitle">
           <div class="slashBlock"></div>
           Keynote
@@ -202,7 +200,7 @@
         </h1>
       </div>
 
-      <div class="peopleContent">
+      <div class="block peopleContent">
         <div class="peopleContentWrapper">
           <div class="textContent">
             <table>
@@ -249,7 +247,7 @@
         </div>
       </div>
 
-      <div class="blockTitle">
+      <div class="block section-title">
         <h1 class="slashTitle">
           <div class="slashBlock"></div>
           其他議程
@@ -257,7 +255,7 @@
         </h1>
       </div>
 
-      <div class="peopleContent">
+      <div class="block peopleContent">
         <div class="peopleContentWrapper">
           <div class="textContent">
             <table>
@@ -327,7 +325,7 @@
         </div>
       </div>
 
-      <div class="blockTitle">
+      <div class="block section-title">
         <h1 class="slashTitle">
           <div class="slashBlock"></div>
           人物專訪
@@ -335,7 +333,7 @@
         </h1>
       </div>
 
-      <div class="peopleContent">
+      <div class="block peopleContent">
         <div class="peopleContentWrapper">
           <div class="textContent">
             <table>
@@ -380,7 +378,7 @@
         </div>
       </div>
 
-      <div class="blockTitle">
+      <div class="block section-title">
         <h1 class="slashTitle">
           <div class="slashBlock"></div>
           贊助單位
@@ -388,7 +386,7 @@
         </h1>
       </div>
 
-      <div class="sponsorblockContent">
+      <div class="block sponsor-block">
         <table>
           <tr>
             <td>
@@ -415,9 +413,9 @@
         </table>
       </div>
 
-      <div class="blockTitle"></div>
+      <div class="block section-title"></div>
 
-      <div id="footer">
+      <div class="block" id="footer">
         <div class="footerTitle">
           <div class="footerTitleContent">
             <p class="CopyrightTitle small-text">
