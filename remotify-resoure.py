@@ -16,7 +16,7 @@ def process(file_name, output_file, remote_base_url):
         return 'src="%s"' % url
 
     content = open(file_name).read()
-    content = re.sub('url\(\'([^\']*)\'\)', replace_processor_url, content)
+    content = re.sub('url\([\'"]([^\']*)[\'"]\)', replace_processor_url, content)
     content = re.sub('src="([^"]*)"', replace_processor_src, content)
     open(output_file, 'w').write(content)
     return True
