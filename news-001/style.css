@@ -1,3 +1,4 @@
+/* base settings */
 body {
     padding: 0px;
     font-family: 'PT Sans Narrow', 'Source Han Sans TC', 'Open Sans Han TWHK', Roboto,
@@ -14,6 +15,9 @@ body {
     font-weight: 300;
 }
 
+
+
+/* base element */
 table {
     border: 0;
 }
@@ -47,6 +51,9 @@ a {
     color: #99e;
 }
 
+
+
+/* additional decorate class */
 .small-text {
     font-size: 0.9em;
 }
@@ -55,93 +62,80 @@ a {
     font-size: 1.3em;
 }
 
+
+
+/* functional class */
+.clearfix {
+    clear: both;
+    display: inline-block;
+}
+
+
+
+/* wrapper */
 #wrapper {
     padding: 0;
-    height:auto;
+    height: auto;
     max-width: 760px;
     margin: 0 auto;
 }
-#bannerLogo {
-    text-align:center;
-    height:80px;
-    margin-top: 60px;
-}
-#footer {
-    height:200px;
-}
 
-.bannerBlock img {
-    width: 100%;
-}
-.bannerTitle {
-    position: absolute;
-    bottom: -20px; left: 2px;
-    padding-left: 32px;
-    opacity: 0.8;
-}
+
+
+/* block level style */
 .block {
     overflow: hidden;
     padding: 18px 15px;
 }
-.textContent {
-    position: relative;
-    display: inline;
-    overflow: hidden;
-    height:auto;
-    padding-left: 1px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-top: 0px;
 
-}
-.sponsor-block {
-    position: relative;
-    overflow: hidden;
-    height:auto;
-    padding-left: 24px;
-    padding-right: 48px;
-    padding-bottom: 32px;
-    padding-top: 18px;
-}
 .section-title {
     height: 60px;
     text-align: center;
     line-height: 60px;
 }
-.slashBlock {
+
+.sponsor-block {
+    position: relative;
+    overflow: hidden;
+    padding-left: 24px;
+    padding-right: 48px;
+    padding-bottom: 32px;
+    padding-top: 18px;
+}
+
+.footer-block {
+    padding-left: 40px;
+}
+
+
+
+/* component */
+.red-slash {
     display: inline-block;
     background: url('slash.png');
     height: 24px;
     width: 24px;
 }
-.slashTitle {
-    color:  #BA5347;
+
+.section-title-inner {
+    color: #BA5347;
     margin-left: 10px;
     margin-right: 10px;
 }
-.footerTitleContent {
-    padding-top: 20px;
-    padding-left:40px;
+
+
+
+/* content style */
+.header-logo {
+    text-align: center;
+    height: 80px;
+    margin-top: 60px;
 }
-.blockSmallTitle {
-    color:  rgb(255, 255, 255);
+
+.header-banner img {
+    width: 100%;
 }
-.peopleContentWrapper {
-    position: relative;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    clear: both;
-}
-.peopleContent {
-    position: relative;
-    overflow: hidden;
-    height:auto;
-    padding: 18px 10px 32px;
-}
+
 .peopleImage {
     margin-right: 12px;
-}
-.clearfix {
-    clear: both;
-    display: inline-block;
 }
