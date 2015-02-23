@@ -4,7 +4,15 @@ import bs4
 import sys
 import os
 
+__all__ = [
+    'strip_css_comment',
+    'apply_inline_css',
+    'process_html_content',
+    'inline_html_file'
+]
+
 def strip_css_comment(style_content):
+    'strip comment in css'
     while True:
         comment_start = style_content.find('/*')
         comment_end = style_content.find('*/')
@@ -15,6 +23,7 @@ def strip_css_comment(style_content):
     return style_content
 
 def apply_inline_css(document, style_content):
+    'spread css to every element'
     style_content = strip_css_comment(style_content)
     # split by lines
     lines = [ l.strip() for l in style_content.split('\n') ]
@@ -40,6 +49,11 @@ def apply_inline_css(document, style_content):
             body.append(l) # css content
 
 def process_html_content(content):
+    '''
+    try to parse html content and do `apply_inline_css`
+
+    *make sure that your current work directory is same as content*
+    '''
     document = bs4.BeautifulSoup(content)
 
     for link in document.select('link'):
@@ -57,6 +71,9 @@ def process_html_content(content):
     return document.prettify()
 
 def inline_html_file(input_file, output_file):
+    '''
+    same as `process_html_content`, it deals with work directory automatically.
+    '''
     content = open(input_file).read()
     cwd = os.getcwd()
     os.chdir(os.path.dirname(input_file))

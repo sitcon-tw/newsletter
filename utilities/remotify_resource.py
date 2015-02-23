@@ -5,9 +5,14 @@ import sys
 
 VERBOSE = False
 
-def remotify_resource_file(remote_base_url, file_name, output_file):
-    global VERBOSE
+__all__ = [
+    'remotify_resource_file',
+    'replace_processor_url',
+    'replace_processor_src'
+]
 
+def remotify_resource_file(remote_base_url, file_name, output_file):
+    '''read file and change assets url'''
     def replace_processor_url(match):
         url = match.group(1)
         if VERBOSE: print('url::Origin: ' + url)
