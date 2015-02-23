@@ -22,7 +22,7 @@ print('To: {to}'.format(to = to.split(',')))
 print('Title: {title}'.format(title = title))
 
 ans = input('Continue? (y)').strip()
-if ans and (ans != 'y' or ans != 'Y'):
+if ans and (ans != 'y' and ans != 'Y'):
     print('Abort.')
     exit(0)
 
