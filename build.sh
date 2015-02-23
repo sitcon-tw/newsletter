@@ -17,6 +17,6 @@ fi
 
 mkdir build
 cp -R ${target}/* build/
-./remotify_resoure.py "http://sitcon.org/newsletter/${target}/" build/index.html
+./remotify-resoure.py "http://sitcon.org/newsletter/${target}/" build/index.html
 ./inline-css.py build/index.out.html build/index.html
 rm build/index.out.html
