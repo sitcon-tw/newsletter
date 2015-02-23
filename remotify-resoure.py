@@ -3,16 +3,24 @@
 import re
 import sys
 
-def process(file_name, output_file, remote_base_url):
+VERBOSE = False
+
+def remotify_resource_file(remote_base_url, file_name, output_file):
+    global VERBOSE
+
     def replace_processor_url(match):
         url = match.group(1)
+        if VERBOSE: print('url::Origin: ' + url)
         if not url.startswith("http"):
             url = remote_base_url + url
+        if VERBOSE: print('url::Remote: ' + url)
         return "url('%s')" % url
     def replace_processor_src(match):
         url = match.group(1)
+        if VERBOSE: print('src::Origin: ' + url)
         if not url.startswith("http"):
             url = remote_base_url + url
+        if VERBOSE: print('src::Remote: ' + url)
         return 'src="%s"' % url
 
     content = open(file_name).read()
@@ -22,24 +30,28 @@ def process(file_name, output_file, remote_base_url):
     return True
 
 def main(argv):
-    if len(argv) < 3:
-        print(
-            'Usage: {} remote_base_url file1 [file2] ...'.format(argv[0]),
-            file = sys.stderr
+    global VERBOSE
+
+    if len(argv) < 4:
+        print('''\
+Usage: {} remote_base_url file-in file-out [options...]
+
+    options:
+        -v, --verbose   Output more message
+'''.format(argv[0]), file = sys.stderr
         )
         exit(1)
 
-    _, remote_base_url, *files = argv
+    _, remote_base_url, file_in, file_out, *args = argv
+
     if remote_base_url[-1] != '/':
         remote_base_url += '/'
-    for f in files:
-        *p, ext = f.split('.')
-        out = '.'.join(p) + '.out.' + ext
-        result = process(f, out, remote_base_url)
-        print('File {filename} ... {status}'.format(
-            filename = f,
-            status = 'OK' if result else 'Failed'
-            ))
+
+    if '-v' in args or '--verbose' in args:
+        VERBOSE = True
+        print('VERBOSE: ON')
+
+    remotify_resource_file(remote_base_url, file_in, file_out)
 
 if __name__ == '__main__':
     main(sys.argv)

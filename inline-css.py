@@ -39,7 +39,7 @@ def apply_inline_css(document, style_content):
         else:
             body.append(l) # css content
 
-def process(content):
+def process_html_content(content):
     document = bs4.BeautifulSoup(content)
 
     for link in document.select('link'):
@@ -56,6 +56,14 @@ def process(content):
 
     return document.prettify()
 
+def inline_html_file(input_file, output_file):
+    content = open(input_file).read()
+    cwd = os.getcwd()
+    os.chdir(os.path.dirname(input_file))
+    result = process_html_content(content)
+    os.chdir(cwd)
+    open(output_file, 'w').write(result)
+
 def main(argv):
     if len(argv) < 3:
         print(
@@ -65,12 +73,7 @@ def main(argv):
         exit(1)
 
     _, input_file, output_file, *_ = argv
-    content = open(input_file).read()
-    cwd = os.getcwd()
-    os.chdir(os.path.dirname(input_file))
-    result = process(content)
-    os.chdir(cwd)
-    open(output_file, 'w').write(result)
+    inline_html_file(input_file, output_file)
 
 if __name__ == '__main__':
     main(sys.argv)
