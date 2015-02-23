@@ -1,8 +1,17 @@
 #!/usr/bin/env bash
 
+remote_base_url="http://sitcon.org/newsletter"
+
 if [ -z "$1" ]; then
-    echo "Usage: $0 target-folder" >&2
+    echo "Usage: $0 target-folder [remote-base-url]" >&2
     exit 1
+fi
+
+if [ -n "$2" ]; then
+    remote_base_url="$2"
+    if [ "${remote_base_url: -1}" = "/" ]; then
+        remote_base_url="${remote_base_url:0: -1}"
+    fi
 fi
 
 target="$1"
@@ -15,8 +24,10 @@ if [ "${target:0:1}" = "/" ]; then
     target="${target:1}"
 fi
 
+echo "Remote Assets URL = ${remote_base_url}/${target}/"
+
 mkdir build
 cp -R ${target}/* build/
-./remotify-resoure.py "http://sitcon.org/newsletter/${target}/" build/index.html
+./remotify-resoure.py "${remote_base_url}/${target}/" build/index.html
 ./inline-css.py build/index.out.html build/index.html
 rm build/index.out.html
