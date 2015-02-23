@@ -43,8 +43,16 @@ p {
     text-align-last: justify;
 }
 
+a {
+    color: #99e;
+}
+
 .small-text {
-    font-size: 0.75em;
+    font-size: 0.9em;
+}
+
+.big-text {
+    font-size: 1.3em;
 }
 
 #wrapper {
@@ -59,12 +67,9 @@ p {
     margin-top: 60px;
 }
 #footer {
-    color:  rgba(255, 255, 255, 0.88);
     height:200px;
 }
-.CopyrightTitle {
-    color:  rgba(255, 255, 255, 0.88);
-}
+
 .bannerBlock img {
     width: 100%;
 }
