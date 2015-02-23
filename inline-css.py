@@ -16,17 +16,18 @@ def process(content):
 
         for l in lines:
             if l[-1] == '{': # start
-                selector = l[:-1].strip()
+                selectors = [ s.strip() for s in l[:-1].split(',') ]
                 body = []
             elif l[-1] == '}': # end
                 l = l[:-1].strip()
                 if l: body.append(l)
                 body = ' '.join(body)
 
-                for elem in document.select(selector):
-                    try: origin = elem['style'] + ' '
-                    except: origin = ''
-                    elem['style'] = origin + body
+                for selector in selectors:
+                    for elem in document.select(selector):
+                        try: origin = elem['style'] + ' '
+                        except: origin = ''
+                        elem['style'] = origin + body
             else:
                 body.append(l)
 
