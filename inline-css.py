@@ -4,7 +4,18 @@ import bs4
 import sys
 import os
 
+def strip_css_comment(style_content):
+    while True:
+        comment_start = style_content.find('/*')
+        comment_end = style_content.find('*/')
+        if comment_start == -1 or comment_end == -1:
+            break
+        style_content = (style_content[:comment_start] +
+                         style_content[comment_end+2:])
+    return style_content
+
 def apply_inline_css(document, style_content):
+    style_content = strip_css_comment(style_content)
     # split by lines
     lines = [ l.strip() for l in style_content.split('\n') ]
     # remove empty lines
