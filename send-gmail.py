@@ -43,7 +43,12 @@ msg_full = message.as_string()
 server = smtplib.SMTP('smtp.gmail.com:587')
 server.starttls()
 server.login(usr, pwd)
-server.sendmail(usr + '@gmail.com',
+ret = server.sendmail(usr + '@gmail.com',
                 [ r.strip() for r in to.split(',') ],
                 msg_full)
 server.quit()
+
+print('=== Result ===')
+print(ret)
+print('')
+print('Mail Sent...')
