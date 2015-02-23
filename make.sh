@@ -28,6 +28,6 @@ echo "Remote Assets URL = ${remote_base_url}/${target}/"
 
 mkdir build
 cp -R ${target}/* build/
-./inline-css.py build/index.html build/index.html
-./remotify-resoure.py "${remote_base_url}/${target}/" build/index.html build/index.html -v
+./utilities/inline_css.py build/index.html build/index.html
+./utilities/remotify_resource.py "${remote_base_url}/${target}/" build/index.html build/index.html -v
 mv build/index.out.html build/index.html
