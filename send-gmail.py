@@ -17,6 +17,15 @@ pwd = getpass.getpass()
 title = input('Title: ')
 to = input('To: ')
 
+print('From: {usr}@gmail.com'.format(usr = usr))
+print('To: {to}'.format(to = to.split(',')))
+print('Title: {title}'.format(title = title))
+
+ans = input('Continue? (y)').strip()
+if ans and (ans != 'y' or ans != 'Y'):
+    print('Abort.')
+    exit(0)
+
 
 message = MIMEMultipart()
 html = open(sys.argv[1]).read()
