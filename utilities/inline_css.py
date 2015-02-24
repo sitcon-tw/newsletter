@@ -62,6 +62,7 @@ def process_html_content(content):
         if filename.endswith('.css'):
             style_content = open(filename).read()
             apply_inline_css(document, style_content)
+        link.decompose()
 
     for style in document.select('style'):
         apply_inline_css(document, style.text)
