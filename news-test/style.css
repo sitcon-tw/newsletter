@@ -1,0 +1,149 @@
+/* base settings */
+body {
+    padding: 0px;
+    font-family: 'PT Sans Narrow', 'Source Han Sans TC', 'Open Sans Han TWHK', Roboto,
+        'Noto Sans CJK TC', 'Noto Sans T Chinese', 'Source Han Sans TC',
+        '黑體-繁', 'Heiti TC', '蘋果儷中黑', 'Apple LiGothic Medium',
+        '微軟雅黑', 'Microsoft YaHei ', '微軟正黑體', 'Microsoft JhengHei',
+        '文泉驛微米黑', 'WenQuanYi Micro Hei', '文泉驛正黑',
+        'Droid Sans', 'Droid Sans Fallback',
+        sans-serif;
+    background: url('bg-grid.png') repeat scroll 0% 0% #151924;
+    letter-spacing: 0.05em;
+    line-height: 1.5em;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+
+/* base element */
+table {
+    border: 0;
+}
+
+hr {
+    margin: 16px 0;
+}
+
+h1, h2, h3 {
+    color: #fff;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.6em;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 1.4em;
+}
+
+p {
+    color: #eee;
+    text-align: justify;
+    text-align-last: justify;
+}
+
+a {
+    color: #99e;
+}
+
+
+
+/* additional decorate class */
+.small-text {
+    font-size: 0.9em;
+}
+
+.big-text {
+    font-size: 1.3em;
+}
+
+
+
+/* functional class */
+.clearfix {
+    clear: both;
+    display: inline-block;
+}
+
+
+
+/* wrapper */
+#wrapper {
+    padding: 0;
+    height: auto;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+
+
+/* block level style */
+.block {
+    overflow: hidden;
+    padding: 18px 15px;
+}
+
+.section-title {
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.sponsor-block {
+    position: relative;
+    overflow: hidden;
+    padding-left: 24px;
+    padding-right: 48px;
+    padding-bottom: 32px;
+    padding-top: 18px;
+}
+
+.footer-block {
+    padding-left: 40px;
+}
+
+
+
+/* component */
+.red-slash {
+    display: inline-block;
+    background: url('slash.png');
+    height: 24px;
+    width: 24px;
+}
+
+.section-title-inner {
+    color: #BA5347;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+/* content style */
+.header-logo {
+    text-align: center;
+    height: 80px;
+    margin-top: 60px;
+}
+
+.header-banner {
+    padding: 0 !important;
+}
+
+.header-banner img {
+    width: 100%;
+}
+
+.peopleImage {
+    margin-right: 12px;
+}
