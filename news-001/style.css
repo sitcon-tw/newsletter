@@ -136,6 +136,10 @@ a {
     margin-top: 60px;
 }
 
+.header-banner {
+    padding: 0 !important;
+}
+
 .header-banner img {
     width: 100%;
 }
