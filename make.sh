@@ -30,4 +30,3 @@ mkdir build
 cp -R ${target}/* build/
 ./utilities/inline_css.py build/index.html build/index.html
 ./utilities/remotify_resource.py "${remote_base_url}/${target}/" build/index.html build/index.html -v
-mv build/index.out.html build/index.html
