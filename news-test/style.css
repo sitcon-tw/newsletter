@@ -89,7 +89,7 @@ a {
 /* block level style */
 .block {
     overflow: hidden;
-    padding: 18px 15px;
+    padding: 18px 5%;
 }
 
 .section-title {
