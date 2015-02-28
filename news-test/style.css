@@ -5,6 +5,9 @@ body {
 }
 
 #fake-body {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     padding: 0;
     margin: 0;
     font-family: 'PT Sans Narrow', 'Open Han Sans TWHK', sans-serif;
@@ -24,9 +27,13 @@ table {
 }
 
 hr {
-    margin: 24px 0;
     border: none;
     border-bottom: 1px solid #BA5347;
+}
+
+/* Outlook Hacking */
+.hr-spacing {
+  padding: 24px;
 }
 
 h1, h2, h3 {
@@ -102,8 +109,6 @@ a span {
     overflow: hidden;
 }
 
-
-
 /* block level style */
 .block {
     overflow: hidden;
@@ -111,7 +116,6 @@ a span {
 }
 
 .section-title {
-    height: 60px;
     text-align: center;
     line-height: 60px;
 }
@@ -125,8 +129,6 @@ a span {
 .footer-block {
     padding-left: 40px;
 }
-
-
 
 /* component */
 .red-slash {
