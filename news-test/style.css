@@ -5,30 +5,30 @@ body {
 }
 
 #fake-body {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: 'PT Sans Narrow', 'Open Han Sans TWHK', sans-serif;
-    background: #151924;
-    letter-spacing: 0.1em;
-    line-height: 1.5em;
-    font-size: 16px;
-    font-weight: 300;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'PT Sans Narrow', 'Open Han Sans TWHK', sans-serif;
+  background: #151924;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+  font-size: 16px;
+  font-weight: 300;
 
-    overflow: hidden;
-    zoom: 1;
+  overflow: hidden;
+  zoom: 1;
 }
 
 /* base element */
 table {
-    border: 0;
+  border: 0;
 }
 
 hr {
-    border: none;
-    border-bottom: 1px solid #BA5347;
+  border: none;
+  border-bottom: 1px solid #BA5347;
 }
 
 /* Outlook Hacking */
@@ -37,58 +37,54 @@ hr {
 }
 
 h1, h2, h3 {
-    color: #fff;
+  color: #fff;
 }
 
 h1 {
-    font-weight: 700;
-    font-size: 1.8em;
+  font-weight: 700;
+  font-size: 1.8em;
 }
 
 h2 {
-    font-weight: 600;
-    font-size: 1.6em;
+  font-weight: 600;
+  font-size: 1.6em;
 }
 
 h3 {
-    font-weight: 500;
-    font-size: 1.4em;
-    color: #BA5346;
+  font-weight: 500;
+  font-size: 1.4em;
+  color: #BA5346;
 
-    margin-top: 0;
+  margin-top: 0;
 }
 
 p {
-    color: #eee;
-    text-align: justify;
-    text-align-last: justify;
+  color: #eee;
+  text-align: justify;
+  text-align-last: justify;
 }
 
 a {
-    color: #BA5346;
+  color: #BA5346;
 }
 
 a span {
   line-height: 1.5em;
 }
 
-
-
 /* additional decorate class */
 .small-text {
-    font-size: 0.9em;
+  font-size: 0.9em;
 }
 
 .big-text {
-    font-size: 1.3em;
+  font-size: 1.3em;
 }
-
-
 
 /* functional class */
 .clearfix {
-    clear: both;
-    display: inline-block;
+  clear: both;
+  display: inline-block;
 }
 
 /* Background Grid */
@@ -101,69 +97,70 @@ a span {
 
 /* wrapper */
 #wrapper {
-    padding: 0;
-    height: auto;
-    max-width: 760px;
-    margin: 50px auto;
+  padding: 0;
+  height: auto;
+  max-width: 760px;
+  margin: 50px auto;
 
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /* block level style */
 .block {
-    overflow: hidden;
-    padding: 18px 5% 0;
+  overflow: hidden;
+  padding: 18px 5% 0;
 }
 
 .section-title {
-    text-align: center;
-    line-height: 60px;
+  text-align: center;
+  line-height: 60px;
 }
 
 .sponsor-block {
-    position: relative;
-    overflow: hidden;
-    padding: 18px 5%;
+  position: relative;
+  overflow: hidden;
+  padding: 18px 5%;
 }
 
 .footer-block {
-    padding-left: 40px;
+  padding-left: 40px;
 }
 
 /* component */
 .red-slash {
-    display: inline-block;
-    background: url('slash.png');
-    height: 24px;
-    width: 24px;
+  display: inline-block;
+  background: url('slash.png');
+  height: 24px;
+  width: 24px;
 }
 
 .section-title-inner {
-    color: #BA5347;
-    margin-left: 10px;
-    margin-right: 10px;
+  color: #BA5347;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 
 
 /* content style */
 .header-logo {
-    text-align: center;
-    height: 80px;
+  text-align: center;
+  height: 80px;
 }
 
 .header-banner {
-    padding: 18px 5% 0px !important;
+  padding: 18px 5% 0px !important;
 }
 
 .header-banner img {
-    width: 100%;
+  width: 100%;
 }
 
 .peopleImageCell {
-    vertical-align: top;
+  vertical-align: top;
+  padding-top: 5px;
+  padding-right: 12px;
 }
 
 .peopleImage {
-    margin-right: 12px;
 }
