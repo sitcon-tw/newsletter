@@ -27,10 +27,18 @@ def remotify_resource_file(remote_base_url, file_name, output_file):
             url = remote_base_url + url
         if VERBOSE: print('src::Remote: ' + url)
         return 'src="%s"' % url
+    def replace_processor_href(match):
+        url = match.group(1)
+        if VERBOSE: print('href::Origin: ' + url)
+        if not url.startswith("http") and not url.startswith('mailto:'):
+            url = remote_base_url + url
+        if VERBOSE: print('href::Remote: ' + url)
+        return 'href="%s"' % url
 
     content = open(file_name).read()
     content = re.sub('url\([\'"]([^\']*)[\'"]\)', replace_processor_url, content)
     content = re.sub('src="([^"]*)"', replace_processor_src, content)
+    content = re.sub('href="([^"]*)"', replace_processor_href, content)
     open(output_file, 'w').write(content)
     return True
 
