@@ -1,5 +1,10 @@
 /* base settings */
 body {
+  padding: 0;
+  margin: 0;
+}
+
+#fake-body {
     padding: 0;
     margin: 0;
     font-family: 'PT Sans Narrow', 'Open Han Sans TWHK', sans-serif;
@@ -8,6 +13,9 @@ body {
     line-height: 1.5em;
     font-size: 16px;
     font-weight: 300;
+
+    overflow: hidden;
+    zoom: 1;
 }
 
 /* base element */
@@ -79,6 +87,9 @@ a span {
 /* Background Grid */
 #background-grid {
   background-image: url('bg-grid.png');
+
+  overflow: hidden;
+  zoom: 1;
 }
 
 /* wrapper */
@@ -86,7 +97,7 @@ a span {
     padding: 0;
     height: auto;
     max-width: 760px;
-    margin: 0 auto;
+    margin: 50px auto;
 
     overflow: hidden;
 }
@@ -137,7 +148,6 @@ a span {
 .header-logo {
     text-align: center;
     height: 80px;
-    margin-top: 60px;
 }
 
 .header-banner {
