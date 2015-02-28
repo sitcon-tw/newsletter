@@ -96,7 +96,7 @@ a span {
 /* block level style */
 .block {
     overflow: hidden;
-    padding: 18px 5%;
+    padding: 18px 5% 0;
 }
 
 .section-title {
@@ -141,7 +141,7 @@ a span {
 }
 
 .header-banner {
-    padding: 0 !important;
+    padding: 18px 5% 0px !important;
 }
 
 .header-banner img {
