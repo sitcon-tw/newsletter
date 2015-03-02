@@ -54,7 +54,7 @@ def process_html_content(content):
 
     *make sure that your current work directory is same as content*
     '''
-    document = bs4.BeautifulSoup(content)
+    document = bs4.BeautifulSoup(content, 'html5')
 
     for link in document.select('link'):
         try: filename = link['href']
