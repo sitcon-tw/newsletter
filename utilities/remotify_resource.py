@@ -41,6 +41,14 @@ def remotify_resource_file(remote_base_url, file_name, output_file):
             url = remote_base_url + url
         if VERBOSE: print('meta::Remote: ' + url)
         return '<meta content="%s" property="og:url" />' % url
+    def replace_background(match):
+        url = match.group(1)
+        if url and url[0] != '#':
+            if VERBOSE: print('meta::Origin: ' + url)
+            if not url.startswith("http"):
+                url = remote_base_url + url
+            if VERBOSE: print('meta::Remote: ' + url)
+        return 'background="%s"' % url
 
     content = open(file_name).read()
     content = re.sub('url\([\'"]([^\']*)[\'"]\)', replace_processor_url, content)
@@ -48,6 +56,7 @@ def remotify_resource_file(remote_base_url, file_name, output_file):
     content = re.sub('href="([^"]*)"', replace_processor_href, content)
     content = re.sub('<meta\s+content="([^"]*)"\s+property="og:url"\s*/?>', meta_tag, content)
     content = re.sub('<meta\s+property="og:url"\s+content="([^"]*)"\s*/?>', meta_tag, content)
+    content = re.sub('background="([^"]+)"', replace_background, content)
     open(output_file, 'w').write(content)
     return True
 
