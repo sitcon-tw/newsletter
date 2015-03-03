@@ -1,0 +1,164 @@
+/* base settings */
+body {
+  padding: 0;
+  margin: 0;
+  background: #151924;
+}
+
+#fake-body {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'PT Sans Narrow', 'Open Han Sans TWHK', sans-serif;
+  background: #151924;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+  font-size: 16px;
+  font-weight: 300;
+
+}
+
+/* base element */
+table {
+  border: 0;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #BA5347;
+}
+
+/* Outlook Hacking */
+.hr-spacing {
+  padding: 24px;
+}
+
+h1, h2, h3 {
+  color: #fff;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.8em;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.6em;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 1.4em;
+  color: #BA5346;
+
+  margin-top: 0;
+}
+
+p {
+  color: #eee;
+}
+
+a {
+  color: #BA5346;
+}
+
+a span {
+  line-height: 1.5em;
+}
+
+/* additional decorate class */
+.small-text {
+  font-size: 0.9em;
+}
+
+.big-text {
+  font-size: 1.3em;
+}
+
+/* functional class */
+.clearfix {
+  clear: both;
+  display: inline-block;
+}
+
+/* Background Grid */
+#background-grid {
+  background-image: url('bg-grid.png');
+
+}
+
+/* wrapper */
+#wrapper {
+  padding: 0;
+  height: auto;
+  max-width: 760px;
+  margin: 50px auto;
+
+}
+
+/* block level style */
+.block {
+  padding: 18px 15px 0;
+}
+
+.section-title {
+  text-align: center;
+  line-height: 60px;
+}
+
+.thesponsor-block {
+  position: relative;
+  padding: 18px 0 0;
+}
+
+.footer-block {
+  padding-left: 40px;
+}
+
+/* component */
+.red-slash {
+  display: inline-block;
+  background: url('slash.png');
+  height: 24px;
+  width: 24px;
+}
+
+.section-title-inner {
+  color: #BA5347;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+
+/* content style */
+.header-logo {
+  text-align: center;
+  height: 80px;
+}
+
+.header-banner {
+  padding: 18px 0 0px !important;
+}
+
+.header-banner img {
+  width: 100%;
+}
+
+.peopleImageCell {
+  vertical-align: top;
+  padding-top: 5px;
+  padding-right: 12px;
+}
+
+.peopleImage {
+  width: 96px;
+}
+
+.mail-float {
+  display: inline-block;
+  vertical-align: top;
+}
