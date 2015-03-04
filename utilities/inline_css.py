@@ -69,7 +69,7 @@ def process_html_content(content):
         # remove style element
         style.decompose()
 
-    return document.prettify()
+    return str(document)
 
 def inline_html_file(input_file, output_file):
     '''
@@ -80,7 +80,8 @@ def inline_html_file(input_file, output_file):
     os.chdir(os.path.dirname(input_file))
     result = process_html_content(content)
     os.chdir(cwd)
-    open(output_file, 'w').write(result)
+    with open(output_file, 'w') as f:
+        f.write(result)
 
 def main(argv):
     if len(argv) < 3:
