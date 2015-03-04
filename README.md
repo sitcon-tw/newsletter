@@ -6,18 +6,19 @@
 2. CSS Selector 該行請以 `{` 結尾，不可分作多行寫（日後改進）
 3. CSS Selector 該行結尾只能是空白或是 `{` ，後方不可有 CSS 內容（日後改進）
 4. `./make.sh` 後請檢查一次輸出檔案再執行 `./deploy.sh`
-5. 沒有測試過 Python2 ，請用 Python3
+5. 沒有測試過 Python 2 ，請用 Python 3
 
 ## Dependency
 
-- Python3
+- Python 3
 - [beautifulsoup4](https://pypi.python.org/pypi/beautifulsoup4/4.3.2)
+- html5lib
 
 ### Debian-based Linux
 
 ``` shell
 sudo apt-get install python3 python3-pip
-sudo pip3 install beautifulsoup4
+sudo pip3 install beautifulsoup4 html5lib
 ```
 
 ### For OS X
@@ -26,7 +27,7 @@ sudo pip3 install beautifulsoup4
 # Install dependency on OS X (assume you already have homebrew)
 brew install python3
 curl https://bootstrap.pypa.io/get-pip.py | python3
-pip3 install beautifulsoup4
+pip3 install beautifulsoup4 html5lib
 ```
 
 ### Other
