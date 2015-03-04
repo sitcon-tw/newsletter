@@ -11,7 +11,16 @@
 ## Dependency
 
 - Python3
-- beautifulsoup4
+- [beautifulsoup4](https://pypi.python.org/pypi/beautifulsoup4/4.3.2)
+
+### Debian-based Linux
+
+``` shell
+sudo apt-get install python3 python3-pip
+sudo pip3 install beautifulsoup4
+```
+
+### For OS X
 
 ``` shell
 # Install dependency on OS X (assume you already have homebrew)
@@ -19,6 +28,12 @@ brew install python3
 curl https://bootstrap.pypa.io/get-pip.py | python3
 pip3 install beautifulsoup4
 ```
+
+### Other
+
+- Install Python3
+- Install beautifulsoup4
+  ([pip](https://pip.pypa.io/en/latest/) may be helpful)
 
 ## Build Instruciton
 
