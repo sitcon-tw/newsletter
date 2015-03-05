@@ -11,7 +11,7 @@ body {
   max-width: 100%;
   padding: 0;
   margin: 0;
-  font-family: 'PT Sans Narrow', 'Open Han Sans TWHK', sans-serif;
+  font-family: 'PT Sans Narrow', 'Source Han Sans TC', 'Source Han Sans TWHK', 'Noto Sans CJK', sans-serif;
   background: #151924;
   letter-spacing: 0.1em;
   line-height: 1.5em;
