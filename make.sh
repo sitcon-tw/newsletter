@@ -29,5 +29,11 @@ echo "Remote Assets URL = ${remote_base_url}/${target}/"
 mkdir build
 rm -rf build/*
 cp -R ${target}/* build/
+if [ -r build/Makefile ]; then
+    _PWD="$PWD"
+    cd build
+    make
+    cd "$_PWD"
+fi
 ./utilities/inline_css.py build/index.html build/index.html
 ./utilities/remotify_resource.py "${remote_base_url}/${target}/" build/index.html build/index.html
