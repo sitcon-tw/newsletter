@@ -57,7 +57,7 @@ def process_html_content(content):
     document = bs4.BeautifulSoup(content, 'html5')
 
     for link in document.select('link'):
-        if link.get('rel') == 'stylesheet':
+        if 'stylesheet' in link.get('rel'):
             filename = link.get('href', '')
             if filename.endswith('.css'):
                 style_content = open(filename).read()
