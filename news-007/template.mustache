@@ -115,7 +115,10 @@
                       <span>P.O. Box 90-36, Taipei 10699</span><br>
                       <span> </span><br>
                       <span>寄送地址</span><br>
-                      <a href="mailto:contact@sitcon.org">contact@sitcon.org</a>
+                      <a href="mailto:contact@sitcon.org">contact@sitcon.org</a><br>
+                      {{#unsub_mail}}
+                      <span>退訂請 Mail 至 <a href="mailto:{{.}}">{{.}}</a></span><br>
+                      {{/unsub_mail}}
                     </p>
                     <p id="online_link">
                       為追求最佳閱讀體驗，請參閱<a href="index.html">線上版本</a>。
