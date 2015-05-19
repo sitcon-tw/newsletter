@@ -3,10 +3,9 @@
 ## 注意事項
 
 1. 請不要使用 CSS3 Selector (bs4 不支援)
-2. CSS Selector 該行請以 `{` 結尾，不可分作多行寫（日後改進）
-3. CSS Selector 該行結尾只能是空白或是 `{` ，後方不可有 CSS 內容（日後改進）
-4. `./make.sh` 後請檢查一次輸出檔案再執行 `./deploy.sh`
-5. 沒有測試過 Python 2 ，請用 Python 3
+2. CSS Selector 不可分作多行寫（日後改進）
+3. `./make.sh` 後請檢查一次輸出檔案再執行 `./deploy.sh`
+4. 沒有測試過 Python 2 ，請用 Python 3
 
 ## Dependency
 

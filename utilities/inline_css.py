@@ -25,6 +25,8 @@ def strip_css_comment(style_content):
 def apply_inline_css(document, style_content):
     'spread css to every element'
     style_content = strip_css_comment(style_content)
+    # experimental dirty hack, but may break something
+    style_content = style_content.replace('{', '{\n').replace('}', '}\n')
     # split by lines
     lines = [ l.strip() for l in style_content.split('\n') ]
     # remove empty lines
