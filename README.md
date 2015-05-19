@@ -7,6 +7,14 @@
 3. `./make.sh` 後請檢查一次輸出檔案再執行 `./deploy.sh`
 4. 沒有測試過 Python 2 ，請用 Python 3
 
+
+
+1. DO NOT use CSS3 selector. (Not supported in bs4)
+2. DO NOT write CSS selector in multiple lines. (To be improved)
+3. Please check the output file after `./make.sh` to make sure that all things are alright and
+   then execute `./deploy.sh`
+4. Not tested on Python 2, use Python 3
+
 ## 相依性 / Dependency
 
 - Python 3
